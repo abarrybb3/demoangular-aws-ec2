@@ -21,8 +21,7 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool:
-      vmImage: 'ubuntu-20.04'
+    pool: default
     steps:
       - task: NodeTool@0
         inputs:
