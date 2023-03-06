@@ -11,10 +11,10 @@ variables:
   azureSubscription: 'Microsoft Internal Subscription 1(5648d12a-ba49-4789-8793-6f7cc54e1556)'
   
   # Environment name
-  environmentName: 'demoangularmimott'
+  environmentName: 'angular-dev'
 
   # Web app name
-  webAppName: 'demoangularmimott'
+  webAppName: 'angular-demo'
 
 stages:
 - stage: Build
@@ -23,10 +23,10 @@ stages:
   - job: BuildJob
     pool: default
     steps:
-      # - task: NodeTool@0
-      #   inputs:
-      #     versionSpec: '16.x'
-      #   displayName: 'Install Node.js'
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '16.x'
+        displayName: 'Install Node.js'
 
       - script: |
           cd '$(System.DefaultWorkingDirectory)/HelloWorld'
